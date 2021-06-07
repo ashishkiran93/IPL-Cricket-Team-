@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+      <link rel="stylesheet" href="./index.css">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      
+      <script src="./base.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    </head>
+
+
+    <body>
+       <div id="landing-page">
+         <div id="navbar">
+            <div id="logo-container">
+                <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcX5NARdoKZc2Q4VKg6yLOUHT1w8GBViyQarZ2XNQKob6eBUc98UBO2KMh2FQIMEWEgak&usqp=CAU"/>
+            </div>
+            <div id="anchor-tags">
+                <a href="#" class="anchors">HOME</a>
+                <a href="#" class="anchors">MATCHES</a>
+                <a href="#" class="anchors">SCHEDULE</a>
+                <div id="dropdown">
+                  <button class="dd-buttun" onclick="hit()">SEARCH TEAMS <span id="tab"><i class="fas fa-search"></i></span></button>
+                  <div id="dropdown-content" class="my-dropdown">
+                      <input type="text" placeholder="Enter team" id='myInput' onkeyup="filterfunc()">
+                      <a href="./team.html?p=1">CSK</a>
+                      <a href="./team.html?p=2">DC</a>
+                      <a href="./team.html?p=3">KKR</a>
+                      <a href="./team.html?p=4">MI</a>
+                      <a href="./team.html?p=6">RR</a>
+                      <a href="./team.html?p=7">RCB</a>
+                      <a href="./team.html?p=5">PXIB</a>
+
+                  </div>
+                </div>
+                
+                
+                
+                
+            </div>
+            <div id="button-box">
+               <a href="./creatTeam.html"><button class=nav-button >Create Team</button></a> 
+                
+            </div>
+         </div><!--End of Navbar-->
+
+         <div id="card-container">
+             <!--<div class="team-cards">
+                <div>
+                    <img class="team-image" src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Chennai_Super_Kings_Logo.svg/1200px-Chennai_Super_Kings_Logo.svg.png">
+                </div>
+                <div class="description-box">
+                    <h3 class="team-name">CHENNAI SUPER KINGS</h3>
+                    <p class="captain-name">CAPTAIN</p>
+                </div>
+             </div>
+
+             <div class="team-cards">
+                <div class="team-image-box">
+                    <img class="team-image" src="https://lh3.googleusercontent.com/proxy/X1uPD6Wjux14G5EtGcyiToaOrJZf7Y7gIKeB6Dgm5WnH3Alhaiv4fQR6SnXGIKopEt_qcerqODSThVtdjSCYi_hcYkhP9ASZ9BcWRb1zuNbzD-D_WQ2n2Pl-W6hhEZ_zOm6YUw">
+                </div>
+                <div class="description-box">
+                    <h3 class="team-name">MUMBAI INDIANS</h3>
+                    <p class="captain-name">CAPTAIN</p>
+                </div>
+             </div>
+
+             <div class="team-cards">
+                <div class="team-image-box">
+                    <img class="team-image" src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f5/Delhi_Capitals_Logo.svg/1200px-Delhi_Capitals_Logo.svg.png">
+                </div>
+                <div class="description-box">
+                    <h3 class="team-name">DELHI CAPITAL</h3>
+                    <p class="captain-name">CAPTAIN</p>
+                </div>
+             </div>
+
+             <div class="team-cards">
+                <div class="team-image-box">
+                    <img class="team-image" src="https://upload.wikimedia.org/wikipedia/en/thumb/8/81/Sunrisers_Hyderabad.svg/1200px-Sunrisers_Hyderabad.svg.png">
+                </div>
+                <div class="description-box">
+                    <h3 class="team-name">SRH</h3>
+                    <p class="captain-name">CAPTAIN</p>
+                </div>
+             </div>
+
+             <div class="team-cards">
+                <div class="team-image-box">
+                    <img class="team-image" src="https://www.searchpng.com/wp-content/uploads/2019/02/Rajasthan-Royals-Logo-PNG-Image.png">
+                </div>
+                <div class="description-box">
+                    <h3 class="team-name">RR</h3>
+                    <p class="captain-name">CAPTAIN</p>
+                </div>
+             </div>
+
+             <div class="team-cards">
+                <div class="team-image-box">
+                    <img class="team-image" src="https://shophigh.in/wp-content/uploads/2021/02/KKr-min.png">
+                </div>
+                <div class="description-box">
+                    <h3 class="team-name">KKR</h3>
+                    <p class="captain-name">CAPTAIN</p>
+                </div>
+             </div>
+
+             <div class="team-cards">
+                <div class="team-image-box">
+                    <img class="team-image" src="https://www.searchpng.com/wp-content/uploads/2019/02/Royal-Challengers-Bangalore-Logo-PNG-715x715.png">
+                </div>
+                <div class="description-box">
+                    <h3 class="team-name">RCB</h3>
+                    <p class="captain-name">KXIP</p>
+                </div>
+             </div>
+
+             <div class="team-cards">
+                <div class="team-image-box">
+                    <img class="team-image" src="https://www.punjabkingsipl.in/static-assets/images/cssimages/logo.png">
+                </div>
+                <div class="description-box">
+                    <h3 class="team-name">TEAM NAME</h3>
+                    <p class="captain-name">CAPTAIN</p>
+                </div>
+             </div>-->
+
+         </div> <!--End of card container-->
+       </div>
+
+       <script>
+
+function hit(){
+    document.getElementById('dropdown-content').classList.toggle('show')
+}
+
+       
+function filterfunc() {
+    var input, filter, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("dropdown-content");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+      txtValue = a[i].textContent || a[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        a[i].style.display = "";
+      } else {
+        a[i].style.display = "none";
+      }
+    }
+  }
+       </script>
+
+       <script src="./index.js"></script>
+    </body>
+
+</html>

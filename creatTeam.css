@@ -1,0 +1,26 @@
+body{
+    background-image: url("./coverPic.png");
+}
+
+#page-title{
+    font-size: 100px;
+    color: white;
+    margin-top: 20px;
+}
+
+#team-form{
+    text-align: center;
+    color: white;
+    
+}
+.key{
+    font-size: 30px;
+}
+.input-tags{
+    font-size: 30px;
+}
+
+#btn{
+    font-size: 30px;
+    margin-top: 20px;
+}
